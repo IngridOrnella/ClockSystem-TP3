@@ -50,8 +50,7 @@ jobs:
       - name: Start Xvfb
         run: Xvfb $DISPLAY -ac -screen 0 1600x1200x24 > /dev/null 2>&1 &  
         
-      - name: Build with Gradle 8.9
-        run: gradle build
+      
         
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
@@ -60,6 +59,8 @@ jobs:
           #build-mode: ${{ matrix.build-mode }}
           queries: security-experimental,security-extended,security-and-quality
           
+      - name: Build with Gradle 8.9
+        run: gradle build   
       
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
