@@ -1,6 +1,8 @@
 ![gradle build](https://github.com/IngridOrnella/ClockSystem-TP3/actions/workflows/gradle.yml/badge.svg)
 ![PMD Analysis](https://github.com/IngridOrnella/ClockSystem-TP3/actions/workflows/pmd.yml/badge.svg)
 ![CodeQL Analysis](https://github.com/IngridOrnella/ClockSystem-TP3/actions/workflows/codeql.yml/badge.svg)
+![OpenSSF Scorecard](https://github.com/IngridOrnella/ClockSystem-TP3/actions/workflows/scorecard.yml/badge.svg)
+
 # ClockSystem
 
 This is a gradle-based Java project for a Clock with Swing GUI and JUnit5 unit tests. It has been created and used by Tom Mens for educational purposes at the University of Mons.
