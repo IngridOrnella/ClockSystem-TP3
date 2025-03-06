@@ -29,7 +29,7 @@ jobs:
         distribution: 'temurin'
         
     - name: Upload a Build Artifact
-    - uses: actions/upload-artifact@v4.6.1
+      uses: actions/upload-artifact@v4.6.1
       with:
         path: app/build/reports/tests
     
