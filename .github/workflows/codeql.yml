@@ -42,10 +42,6 @@ jobs:
         with:
           languages: java # Specify project language
           queries: security-experimental,security-extended,security-and-quality # Use security-focused queries
-
-      - name: Build the project
-        run: |
-          ./gradlew build # Use the correct build command for your project (e.g., Maven or Gradle)
       
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
