@@ -47,7 +47,8 @@ jobs:
         with:
           sarif_file: pmd-report.sarif
 
-      - name: Publish PMD report
-        if: always()
-        run: echo "### PMD Report" >> $GITHUB_STEP_SUMMARY && cat pmd-report.xml >> $GITHUB_STEP_SUMMARY
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v4.6.1
+        with:
+         path: app/build/reports/tests
      
