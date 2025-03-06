@@ -56,8 +56,8 @@ jobs:
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
         with:
-          languages: ${{ matrix.language }}
-          build-mode: ${{ matrix.build-mode }}
+          languages: 'java'
+          #build-mode: ${{ matrix.build-mode }}
           queries: security-experimental,security-extended,security-and-quality
           
       
