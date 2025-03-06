@@ -40,7 +40,7 @@ jobs:
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
         with:
-          languages: java # Specify project language
+          languages: 'java' # Specify project language
           queries: security-experimental,security-extended,security-and-quality # Use security-focused queries
       
       - name: Perform CodeQL Analysis
