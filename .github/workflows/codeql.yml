@@ -41,6 +41,10 @@ jobs:
         with:
           java-version: '21'
           distribution: 'temurin'
+          
+      - name: Build with Gradle 8.9
+        run: gradle build
+        
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
         with:
