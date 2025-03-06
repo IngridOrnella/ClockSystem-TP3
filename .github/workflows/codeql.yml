@@ -32,7 +32,13 @@ jobs:
       actions: read
       contents: read
       security-events: write  # Allows publishing security alerts
-
+    env:
+      DISPLAY: ":99.0" 
+    services:
+        xvfb:
+          image: selenium/standalone-chrome:latest
+          options: -e VNC_SERVER=true -e VNC_PORT=5900
+      
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -41,7 +47,9 @@ jobs:
         with:
           java-version: '21'
           distribution: 'temurin'
-          
+      - name: Start Xvfb
+        run: Xvfb $DISPLAY -ac -screen 0 1600x1200x24 > /dev/null 2>&1 &  
+        
       - name: Build with Gradle 8.9
         run: gradle build
         
